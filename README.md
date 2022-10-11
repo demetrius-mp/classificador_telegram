@@ -22,6 +22,8 @@ Crie um arquivo `.env`, contendo seu token do Telegram, seguindo como exemplo o 
 
 No arquivo [`src/classifiers.py`](/src/classifier.py#L13), no atributo `labels`, defina uma lista ordenada contendo as classes do seu problema.
 
+Ainda no arquivo [`src/classifiers.py`](/src/classifier.py#L51), no método `get_cached_model`, defina o seu modelo corretamente (certifique-se de que o classificador está definido com a mesma quantidade de classes que o seu problema) antes de carregar o estado do modelo utilizando o `load_state_dict()`.
+
 ## Execução
 
 Para instalar as dependências, utilize o gerenciador de pacotes `poetry`, com o seguinte comando:
